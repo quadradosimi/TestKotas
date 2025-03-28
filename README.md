@@ -20,7 +20,8 @@ Rodar Back-end
 
 		update-database
 		
-	Escolha https no Visual Studio para rodar a API. O swagger irá aparecer.
+	Escolha https no Visual Studio para rodar a API. O swagger irá aparecer. A API usa JWT token na autenticação, nos testes não há necessidade de usar o token.
+ 	Mas no postman, por exemplo, é necessário primeiro gerar o token no swagger e depois usá-lo nas requisições. Para gerar o token o usuário é admin e a senha password.
 
 Documentação das tarefas e passos exexutados para finalizar do projeto
 
