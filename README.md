@@ -2,16 +2,16 @@
 
 ## TEST Kotas
 
-Essa API faz o GET de dados sobre Pokemons em uma API externa e trata esses dados para devolvÍ-los. TambÈm È possÌvel
-cadastrar mestres pokemons e os pokemons que foram capturados.  No caso dos Pokemons capturados tambÈm È possÌvel ver uma lista de todos eles.
+Essa API faz o GET de dados sobre Pokemons em uma API externa e trata esses dados para devolv√™-los. Tamb√©m √© poss√≠vel
+cadastrar mestres pokemons e os pokemons que foram capturados.  No caso dos Pokemons capturados tamb√©m √© poss√≠vel ver uma lista de todos eles.
 
-Para rodar a aplicaÁ„o È necess·rio fazer o download do projeto no GitHub
+Para rodar a aplica√ß√£o √© necess√°rio fazer o download do projeto no GitHub
 
-	https://github.com/quadradosimi/Kotas
+	https://github.com/quadradosimi/TestKotas
 
 Rodar Back-end
 	
-	Abra o projeto .Net no arquivo TestKotas.sln. No arquivo appsettings.json mude as configuraÁıes do ConnectionStrings com os dados de sua base de dados.
+	Abra o projeto .Net no arquivo TestKotas.sln. No arquivo appsettings.json mude as configura√ß√µes do ConnectionStrings com os dados de sua base de dados.
 	Rode a migration para criar a base de dados e as tabelas usando o codigo abaixo:
 
 		add-migration [name]
@@ -20,9 +20,9 @@ Rodar Back-end
 
 		update-database
 		
-	Escolha https no Visual Studio para rodar a API. O swagger ir· aparecer.
+	Escolha https no Visual Studio para rodar a API. O swagger ir√° aparecer.
 
-DocumentaÁ„o das tarefas e passos exexutados para finalizar do projeto
+Documenta√ß√£o das tarefas e passos exexutados para finalizar do projeto
 
 	Tarefas:
 
@@ -32,10 +32,10 @@ DocumentaÁ„o das tarefas e passos exexutados para finalizar do projeto
 	
 		- (ok) testes
 
-			 //GetByID para 1 PokÈmon especÌfico
-			 //Get para 10 PokÈmon aleatÛrios
-			 //Listagem dos PokÈmon j· capturados.
-			 //Post para informar que um PokÈmon foi capturado.
+			 //GetByID para 1 Pok√©mon espec√≠fico
+			 //Get para 10 Pok√©mon aleat√≥rios
+			 //Listagem dos Pok√©mon j√° capturados.
+			 //Post para informar que um Pok√©mon foi capturado.
 			 //Post Cadastro do mestre pokemon
 	 
 		- (ok) fazer JWT e colocar [Authorize] controles de novo
@@ -50,46 +50,46 @@ DocumentaÁ„o das tarefas e passos exexutados para finalizar do projeto
  
 				pokemon/ditto, pokemon-species/aegislash, type/3, ability/battle-armor, or pokemon?limit=100000&offset=0.(da API externa)
  
-			- (ok) Get para 10 PokÈmon aleatÛrios
+			- (ok) Get para 10 Pok√©mon aleat√≥rios
 	
-				- usa pokemon?limit=10&offset=0 alterando dinamicamente o valor do offset atÈ 1000
-					- com nome do pokemon pega dados especÌficos (https://pokeapi.co/api/v2/pokemon/wo-chien)(GetByID)
+				- usa pokemon?limit=10&offset=0 alterando dinamicamente o valor do offset at√© 1000
+					- com nome do pokemon pega dados espec√≠ficos (https://pokeapi.co/api/v2/pokemon/wo-chien)(GetByID)
 		
-			- (ok) GetByID para 1 PokÈmon especÌfico
+			- (ok) GetByID para 1 Pok√©mon espec√≠fico
 	
 				- https://pokeapi.co/api/v2/pokemon/wo-chien colocar nome pokemon que quer achar
 		
-				- (ok) converter objeto resposta da API origem em padr„o de resposta da API local
+				- (ok) converter objeto resposta da API origem em padr√£o de resposta da API local
 
-				- (ok) ser· reutilizado como padr„o em todas respostas dos outros endepoints
+				- (ok) ser√° reutilizado como padr√£o em todas respostas dos outros endepoints
 		
-			- (ok) Cadastro do mestre pokemon (dados b·sicos como nome, idade e cpf) em SQLite
+			- (ok) Cadastro do mestre pokemon (dados b√°sicos como nome, idade e cpf) em SQLite
 	
 				- usar EntityFramework
 				- nova tabela MestrePokemon (id, nome, idade e cpf)
 		
-			- (ok) Post para informar que um PokÈmon foi capturado.
+			- (ok) Post para informar que um Pok√©mon foi capturado.
 
 				- usar EntityFramework
 				- validar se nome existe na base origem
 				- nova tabela PokemonCapturado (id, nome pokemon)
 		
-			- (ok) Listagem dos PokÈmon j· capturados.
+			- (ok) Listagem dos Pok√©mon j√° capturados.
 	
 				- usar EntityFramework
 				- get tabela nova PokemonCapturado
 
 		- (ok) Requisitos
 
-			1 - Todos os endpoints devem retornar os dados b·sicos do PokÈmon, suas evoluÁıes e o base64 de sprite default de cada PokÈmon. (usar em GetByID para 1 PokÈmon especÌfico)
+			1 - Todos os endpoints devem retornar os dados b√°sicos do Pok√©mon, suas evolu√ß√µes e o base64 de sprite default de cada Pok√©mon. (usar em GetByID para 1 Pok√©mon espec√≠fico)
 	
-				- base64 de sprite default de cada PokÈmon
+				- base64 de sprite default de cada Pok√©mon
 		
 					"sprites": {
 								 "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1001.png"
 							   }
 				
-				- evoluÁıes 
+				- evolu√ß√µes 
 		
 					 "types": [
 								{
@@ -107,7 +107,7 @@ DocumentaÁ„o das tarefas e passos exexutados para finalizar do projeto
 								  }
 								}
 						
-				- dados b·sicos do PokÈmon
+				- dados b√°sicos do Pok√©mon
 		
 					- "base_experience": 285,
 					- "height": 15,
@@ -118,7 +118,7 @@ DocumentaÁ„o das tarefas e passos exexutados para finalizar do projeto
 					- "order": 996,
 					- "weight": 742
 				
-		- (ok) desenhar models aplicaÁ„o		
+		- (ok) desenhar models aplica√ß√£o		
 
 						- quais model?
 				
@@ -133,7 +133,7 @@ Arquitetura da API Restfull
 		- Arquitetura Monolitica
 		- Arquitetura em Camadas
 					
-	arquitetura de cÛdigo
+	arquitetura de c√≥digo
 				
 		- uso de DDD 
 		- TDD
